@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sterling Nabours IV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .section-label {
+      width: 100%;
+      max-width: 480px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      font-family: 'Poppins', sans-serif;
+      background: #1B2A4A;
+      padding: 6px 12px;
+      display: inline-block;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #EDEAE6;
+      font-family: 'Poppins', sans-serif;
+      padding: 32px 24px 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      background: #F7F5F2;
+      width: 100%;
+      max-width: 480px;
+      border: 1.5px solid #A8832A;
+      padding: 44px 40px 36px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .name {
+      font-family: 'Lora', serif;
+      font-size: clamp(22px, 5vw, 28px);
+      color: #1B2A4A;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      margin-bottom: 10px;
+    }
+
+    .divider { width: 100%; height: 0.4px; background: #1B2A4A; margin-bottom: 14px; }
+
+    .title { font-size: 10px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #1B2A4A; margin-bottom: 5px; }
+    .org   { font-size: 9.5px; color: #A8832A; margin-bottom: 4px; letter-spacing: 0.02em; }
+    .edu   { font-size: 8.5px; font-weight: 300; color: #7A7A7A; letter-spacing: 0.02em; }
+
+    .contact { margin-top: 28px; display: flex; flex-direction: column; gap: 9px; }
+    .contact a { font-size: 9px; font-weight: 300; color: #4A4A4A; text-decoration: none; letter-spacing: 0.03em; transition: color 0.2s; display: flex; align-items: center; gap: 10px; }
+    .contact a:hover { color: #1B2A4A; }
+    .dot { width: 3px; height: 3px; border-radius: 50%; background: #A8832A; flex-shrink: 0; }
+
+    /* Resume panel */
+    .resume-panel {
+      display: block;
+      width: 100%;
+      max-width: 480px;
+      background: #F7F5F2;
+      border: 1.5px solid #A8832A;
+      padding: 36px 40px 44px;
+    }
+
+    .r-section { margin-bottom: 28px; }
+    .r-section:last-child { margin-bottom: 0; }
+
+    .r-heading {
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #A8832A;
+      margin-bottom: 14px;
+      padding-bottom: 6px;
+      border-bottom: 0.4px solid #D8D4CE;
+    }
+
+    .r-job { margin-bottom: 18px; }
+    .r-job:last-child { margin-bottom: 0; }
+
+    .r-job-header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 2px; flex-wrap: wrap; }
+    .r-job-title  { font-size: 9.5px; font-weight: 500; color: #1B2A4A; letter-spacing: 0.02em; }
+    .r-job-date   { font-size: 8px; font-weight: 300; color: #9A9A9A; white-space: nowrap; letter-spacing: 0.03em; }
+    .r-job-org    { font-size: 8.5px; font-weight: 300; color: #A8832A; margin-bottom: 8px; letter-spacing: 0.02em; }
+
+    .r-bullets { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+    .r-bullets li { font-size: 8.5px; font-weight: 300; color: #4A4A4A; line-height: 1.65; padding-left: 12px; position: relative; letter-spacing: 0.01em; }
+    .r-bullets li::before { content: ''; position: absolute; left: 0; top: 7px; width: 3px; height: 3px; border-radius: 50%; background: #A8832A; }
+
+    .r-edu-main   { font-size: 9.5px; font-weight: 500; color: #1B2A4A; margin-bottom: 4px; }
+    .r-edu-detail { font-size: 8.5px; font-weight: 300; color: #7A7A7A; letter-spacing: 0.01em; line-height: 1.6; }
+
+    .r-skills-row { font-size: 8.5px; font-weight: 300; color: #4A4A4A; line-height: 1.7; letter-spacing: 0.01em; margin-bottom: 7px; }
+    .r-skills-row:last-child { margin-bottom: 0; }
+    .r-skills-row strong { font-weight: 500; color: #1B2A4A; }
+  </style>
+</head>
+<body>
+
+  <div class="section-label">Card</div>
+  <div class="card">
+    <div class="name">Sterling Nabours IV</div>
+    <div class="divider"></div>
+    <div class="title">First Team Analyst</div>
+    <div class="org">St. Johnstone FC &nbsp;·&nbsp; Scottish Premiership</div>
+    <div class="edu">Samford University &nbsp;·&nbsp; BS Business Management &nbsp;·&nbsp; Sports Marketing Concentration</div>
+    <div class="contact">
+      <a href="mailto:snabours@samford.edu"><span class="dot"></span>snabours@samford.edu</a>
+      <a href="tel:+16154142985"><span class="dot"></span>615 414 2985</a>
+      <a href="https://linkedin.com/in/sterling-nabours-iv" target="_blank" rel="noopener"><span class="dot"></span>linkedin.com/in/sterling-nabours-iv</a>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top: 40px;">Résumé</div>
+  <div class="resume-panel" id="resume-panel">
+
+    <div class="r-section">
+      <div class="r-heading">Experience</div>
+
+      <div class="r-job">
+        <div class="r-job-header">
+          <span class="r-job-title">First Team Analyst Intern</span>
+          <span class="r-job-date">Nov 2024 – Present</span>
+        </div>
+        <div class="r-job-org">St. Johnstone FC &nbsp;·&nbsp; Perth, Scotland (Remote)</div>
+        <ul class="r-bullets">
+          <li>Built a 21-league Python scouting system using the StatsBomb API, producing automated Excel dashboards with radar charts and percentile rankings for 25+ candidates per position</li>
+          <li>Developed league coefficient adjustment model to normalize player metrics across European leagues, enabling direct comparison of targets from Ligue 2, 3. Liga, Eliteserien, and beyond</li>
+          <li>Produced transfer target shortlists and scouting reports for the Manager and Director of Football, directly informing recruitment decisions</li>
+          <li>Produced weekly video analysis reports on upcoming opponents using Wyscout and Hudl Suite, delivering pre-match packages directly to first team management</li>
+          <li>Designed a multi-tab Excel recruitment database including a data-light overview tab for non-technical staff</li>
+          <li>Managed and directed a freshman intern, delegating workload and maintaining output quality while carrying a full-time academic schedule</li>
+        </ul>
+      </div>
+
+      <div class="r-job">
+        <div class="r-job-header">
+          <span class="r-job-title">Student Assistant — Women's Soccer</span>
+          <span class="r-job-date">Aug 2023 – Nov 2024</span>
+        </div>
+        <div class="r-job-org">Samford University &nbsp;·&nbsp; Birmingham, AL</div>
+        <ul class="r-bullets">
+          <li>Supported coaching staff across training sessions and matchdays, developing understanding of professional performance environments</li>
+          <li>Filmed and catalogued all home matches, contributing to film review processes</li>
+        </ul>
+      </div>
+
+      <div class="r-job">
+        <div class="r-job-header">
+          <span class="r-job-title">Camp Coach</span>
+          <span class="r-job-date">Dec 2023 – Present</span>
+        </div>
+        <div class="r-job-org">St. Louis Development Academy &nbsp;·&nbsp; St. Louis, MO</div>
+        <ul class="r-bullets">
+          <li>Designed and delivered coaching sessions for 40+ young athletes, managing and directing other coaches</li>
+        </ul>
+      </div>
+
+      <div class="r-job">
+        <div class="r-job-header">
+          <span class="r-job-title">Athletics Operations</span>
+          <span class="r-job-date">Jan 2024 – Dec 2025</span>
+        </div>
+        <div class="r-job-org">Samford University / SEC Championship &nbsp;·&nbsp; Birmingham, AL</div>
+        <ul class="r-bullets">
+          <li>Supported gameday operations across Samford Athletics and SEC Football Championship events, gaining exposure to large-scale sporting event management</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="r-section">
+      <div class="r-heading">Education</div>
+      <div class="r-edu-main">Samford University &nbsp;·&nbsp; BS Business Management, Sports Marketing Concentration</div>
+      <div class="r-edu-detail">Expected Dec 2026 &nbsp;·&nbsp; GPA: 3.70 &nbsp;·&nbsp; Dean's List: Fall 2023, Spring 2024, Fall 2024, Fall 2025 &nbsp;·&nbsp; Crosland & Meadors Scholar</div>
+    </div>
+
+    <div class="r-section">
+      <div class="r-heading">Skills & Certifications</div>
+      <div class="r-skills-row"><strong>Analytics & Data:</strong> Python (StatsBomb API, Pandas, statistical modeling), Excel (advanced dashboards, radar charts), StatsBomb, Wyscout</div>
+      <div class="r-skills-row"><strong>Methods:</strong> Player similarity modeling, league coefficient normalization, percentile ranking systems, transfer target analysis</div>
+      <div class="r-skills-row"><strong>Tools:</strong> Microsoft Office, Canva, AI-assisted development in Python, GitHub, Streamlit</div>
+      <div class="r-skills-row"><strong>Certifications:</strong> UEFA Grassroots License (C License equivalent) &nbsp;·&nbsp; StatsBomb IQ &nbsp;·&nbsp; Wyscout Certified</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
